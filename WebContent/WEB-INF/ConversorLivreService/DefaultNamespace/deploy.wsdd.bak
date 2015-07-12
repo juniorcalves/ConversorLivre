@@ -1,0 +1,44 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ConversorLivreService WSDL service -->
+
+  <service name="ConversorLivre" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://DefaultNamespace"/>
+      <parameter name="wsdlServiceElement" value="ConversorLivreService"/>
+      <parameter name="schemaQualified" value="http://DefaultNamespace"/>
+      <parameter name="wsdlServicePort" value="ConversorLivre"/>
+      <parameter name="className" value="DefaultNamespace.ConversorLivreSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="ConversorLivre"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="celciusParaFarenheit" qname="operNS:celciusParaFarenheit" xmlns:operNS="http://DefaultNamespace" returnQName="retNS:celciusParaFarenheitReturn" xmlns:retNS="http://DefaultNamespace" returnType="rtns:float" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:celcius" xmlns:pns="http://DefaultNamespace" type="tns:float" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="celciusParaKelvin" qname="operNS:celciusParaKelvin" xmlns:operNS="http://DefaultNamespace" returnQName="retNS:celciusParaKelvinReturn" xmlns:retNS="http://DefaultNamespace" returnType="rtns:float" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:celcius" xmlns:pns="http://DefaultNamespace" type="tns:float" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="farenheitParaCelcius" qname="operNS:farenheitParaCelcius" xmlns:operNS="http://DefaultNamespace" returnQName="retNS:farenheitParaCelciusReturn" xmlns:retNS="http://DefaultNamespace" returnType="rtns:float" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:farenheit" xmlns:pns="http://DefaultNamespace" type="tns:float" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="farenheitParaKelvin" qname="operNS:farenheitParaKelvin" xmlns:operNS="http://DefaultNamespace" returnQName="retNS:farenheitParaKelvinReturn" xmlns:retNS="http://DefaultNamespace" returnType="rtns:float" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:farenheit" xmlns:pns="http://DefaultNamespace" type="tns:float" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="kelvinParaCelcius" qname="operNS:kelvinParaCelcius" xmlns:operNS="http://DefaultNamespace" returnQName="retNS:kelvinParaCelciusReturn" xmlns:retNS="http://DefaultNamespace" returnType="rtns:float" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:kelvin" xmlns:pns="http://DefaultNamespace" type="tns:float" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="kelvinParaFarenheit" qname="operNS:kelvinParaFarenheit" xmlns:operNS="http://DefaultNamespace" returnQName="retNS:kelvinParaFarenheitReturn" xmlns:retNS="http://DefaultNamespace" returnType="rtns:float" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:kelvin" xmlns:pns="http://DefaultNamespace" type="tns:float" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="celciusParaKelvin celciusParaFarenheit kelvinParaFarenheit farenheitParaKelvin farenheitParaCelcius kelvinParaCelcius"/>
+
+  </service>
+</deployment>

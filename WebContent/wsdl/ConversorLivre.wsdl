@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://DefaultNamespace" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://DefaultNamespace" xmlns:intf="http://DefaultNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://DefaultNamespace" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="celciusParaFarenheit">
+    <complexType>
+     <sequence>
+      <element name="celcius" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="celciusParaFarenheitResponse">
+    <complexType>
+     <sequence>
+      <element name="celciusParaFarenheitReturn" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="celciusParaKelvin">
+    <complexType>
+     <sequence>
+      <element name="celcius" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="celciusParaKelvinResponse">
+    <complexType>
+     <sequence>
+      <element name="celciusParaKelvinReturn" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="farenheitParaCelcius">
+    <complexType>
+     <sequence>
+      <element name="farenheit" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="farenheitParaCelciusResponse">
+    <complexType>
+     <sequence>
+      <element name="farenheitParaCelciusReturn" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="farenheitParaKelvin">
+    <complexType>
+     <sequence>
+      <element name="farenheit" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="farenheitParaKelvinResponse">
+    <complexType>
+     <sequence>
+      <element name="farenheitParaKelvinReturn" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="kelvinParaCelcius">
+    <complexType>
+     <sequence>
+      <element name="kelvin" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="kelvinParaCelciusResponse">
+    <complexType>
+     <sequence>
+      <element name="kelvinParaCelciusReturn" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="kelvinParaFarenheit">
+    <complexType>
+     <sequence>
+      <element name="kelvin" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="kelvinParaFarenheitResponse">
+    <complexType>
+     <sequence>
+      <element name="kelvinParaFarenheitReturn" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="kelvinParaCelciusRequest">
+
+      <wsdl:part element="impl:kelvinParaCelcius" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="celciusParaKelvinResponse">
+
+      <wsdl:part element="impl:celciusParaKelvinResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="celciusParaFarenheitResponse">
+
+      <wsdl:part element="impl:celciusParaFarenheitResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="kelvinParaCelciusResponse">
+
+      <wsdl:part element="impl:kelvinParaCelciusResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="farenheitParaCelciusResponse">
+
+      <wsdl:part element="impl:farenheitParaCelciusResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="kelvinParaFarenheitRequest">
+
+      <wsdl:part element="impl:kelvinParaFarenheit" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="celciusParaKelvinRequest">
+
+      <wsdl:part element="impl:celciusParaKelvin" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="celciusParaFarenheitRequest">
+
+      <wsdl:part element="impl:celciusParaFarenheit" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="farenheitParaKelvinRequest">
+
+      <wsdl:part element="impl:farenheitParaKelvin" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="farenheitParaKelvinResponse">
+
+      <wsdl:part element="impl:farenheitParaKelvinResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="farenheitParaCelciusRequest">
+
+      <wsdl:part element="impl:farenheitParaCelcius" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="kelvinParaFarenheitResponse">
+
+      <wsdl:part element="impl:kelvinParaFarenheitResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ConversorLivre">
+
+      <wsdl:operation name="celciusParaFarenheit">
+
+         <wsdl:input message="impl:celciusParaFarenheitRequest" name="celciusParaFarenheitRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:celciusParaFarenheitResponse" name="celciusParaFarenheitResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="celciusParaKelvin">
+
+         <wsdl:input message="impl:celciusParaKelvinRequest" name="celciusParaKelvinRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:celciusParaKelvinResponse" name="celciusParaKelvinResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="farenheitParaCelcius">
+
+         <wsdl:input message="impl:farenheitParaCelciusRequest" name="farenheitParaCelciusRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:farenheitParaCelciusResponse" name="farenheitParaCelciusResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="farenheitParaKelvin">
+
+         <wsdl:input message="impl:farenheitParaKelvinRequest" name="farenheitParaKelvinRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:farenheitParaKelvinResponse" name="farenheitParaKelvinResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="kelvinParaCelcius">
+
+         <wsdl:input message="impl:kelvinParaCelciusRequest" name="kelvinParaCelciusRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:kelvinParaCelciusResponse" name="kelvinParaCelciusResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="kelvinParaFarenheit">
+
+         <wsdl:input message="impl:kelvinParaFarenheitRequest" name="kelvinParaFarenheitRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:kelvinParaFarenheitResponse" name="kelvinParaFarenheitResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ConversorLivreSoapBinding" type="impl:ConversorLivre">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="celciusParaFarenheit">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="celciusParaFarenheitRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="celciusParaFarenheitResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="celciusParaKelvin">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="celciusParaKelvinRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="celciusParaKelvinResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="farenheitParaCelcius">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="farenheitParaCelciusRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="farenheitParaCelciusResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="farenheitParaKelvin">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="farenheitParaKelvinRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="farenheitParaKelvinResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="kelvinParaCelcius">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="kelvinParaCelciusRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="kelvinParaCelciusResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="kelvinParaFarenheit">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="kelvinParaFarenheitRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="kelvinParaFarenheitResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ConversorLivreService">
+
+      <wsdl:port binding="impl:ConversorLivreSoapBinding" name="ConversorLivre">
+
+         <wsdlsoap:address location="http://localhost:8080/ConversorLivre/services/ConversorLivre"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
